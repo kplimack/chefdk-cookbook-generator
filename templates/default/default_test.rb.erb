@@ -1,0 +1,10 @@
+<%= license_description('#') %>
+require File.expand_path('minitest_helper', File.dirname(__FILE__))
+
+describe '<%= cookbook_name %>::default' do
+  include <%= cookbook_name.split('_').collect(&:capitalize).join %>::TestHelper
+
+  it 'runs a test you need to write' do
+  end
+
+end

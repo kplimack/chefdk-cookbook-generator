@@ -1,0 +1,8 @@
+source 'https://supermarket.getchef.com'
+
+metadata
+
+group :integration do
+  cookbook '<%= cookbook_name %>_test', path: './test/cookbooks/<%= cookbook_name %>_test'
+  cookbook 'minitest-handler', '>= 1.3.2'
+end

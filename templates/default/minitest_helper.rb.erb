@@ -1,0 +1,13 @@
+<%= license_description('#') %>
+require 'minitest/spec'
+require 'minitest-chef-handler'
+
+module <%= cookbook_name.split('_').collect(&:capitalize).join %>
+  # This module is used to extract common inclusions as well as provide any
+  # useful methods that might be used across many test files
+  module TestHelper
+    include MiniTest::Chef::Assertions
+    include MiniTest::Chef::Context
+    include MiniTest::Chef::Resources
+  end
+end
